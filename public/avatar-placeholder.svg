@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#0B1020" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#22D3EE" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="400" rx="200" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Glowing Ring -->
+  <circle cx="200" cy="200" r="190" fill="none" stroke="url(#accentGrad)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6" />
+  
+  <!-- Ambient backdrop lights -->
+  <circle cx="150" cy="150" r="80" fill="url(#glowGrad)" filter="url(#softGlow)" />
+  <circle cx="260" cy="240" r="70" fill="url(#glowGrad)" filter="url(#softGlow)" />
+
+  <!-- Code brackets in background -->
+  <text x="60" y="160" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="700" fill="#7C3AED" opacity="0.3">&lt;/&gt;</text>
+  <text x="310" y="250" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="700" fill="#22D3EE" opacity="0.3">{ ; }</text>
+
+  <!-- Avatar Figure Illustration -->
+  <g transform="translate(0, 10)">
+    <!-- Shoulders / Torso -->
+    <path d="M120 340 C120 280, 160 260, 200 260 C240 260, 280 280, 280 340 Z" fill="#1E293B" />
+    <path d="M135 340 C140 295, 170 275, 200 275 C230 275, 260 295, 265 340 Z" fill="#334155" />
+    <!-- Collar / Hoodie V -->
+    <path d="M185 275 L200 300 L215 275 Z" fill="#0B1020" />
+    <path d="M188 275 L200 294 L212 275" stroke="url(#accentGrad)" stroke-width="2" fill="none" />
+
+    <!-- Neck -->
+    <path d="M185 230 L185 275 L215 275 L215 230 Z" fill="#E2E8F0" />
+
+    <!-- Face -->
+    <ellipse cx="200" cy="195" rx="42" ry="48" fill="#F1F5F9" />
+
+    <!-- Hair - Stylish silhouette -->
+    <path d="M152 185 C148 135, 175 120, 200 120 C235 120, 252 140, 248 185 C242 165, 235 155, 200 155 C165 155, 158 165, 152 185 Z" fill="#0F172A" />
+    <!-- Hair side strands -->
+    <path d="M150 185 C146 220, 155 250, 165 260 C155 240, 150 215, 152 185 Z" fill="#1E293B" />
+    <path d="M250 185 C254 220, 245 250, 235 260 C245 240, 250 215, 248 185 Z" fill="#1E293B" />
+
+    <!-- Glasses - Tech look -->
+    <rect x="168" y="180" width="26" height="18" rx="5" fill="none" stroke="url(#accentGrad)" stroke-width="2.5" />
+    <rect x="206" y="180" width="26" height="18" rx="5" fill="none" stroke="url(#accentGrad)" stroke-width="2.5" />
+    <line x1="194" y1="188" x2="206" y2="188" stroke="url(#accentGrad)" stroke-width="2.5" />
+    <!-- Eyes -->
+    <circle cx="181" cy="189" r="3" fill="#0F172A" />
+    <circle cx="219" cy="189" r="3" fill="#0F172A" />
+    <circle cx="182" cy="188" r="1" fill="#FFFFFF" />
+    <circle cx="220" cy="188" r="1" fill="#FFFFFF" />
+
+    <!-- Smile -->
+    <path d="M190 220 Q200 228 210 220" stroke="#7C3AED" stroke-width="2" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Glowing Badge on corner: 'Full Stack' -->
+  <g transform="translate(130, 320)">
+    <rect width="140" height="32" rx="16" fill="#0F172A" stroke="url(#accentGrad)" stroke-width="2" />
+    <circle cx="20" cy="16" r="4" fill="#22D3EE">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="75" y="21" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" text-anchor="middle">Kavya Sri Dadi</text>
+  </g>
+</svg>
